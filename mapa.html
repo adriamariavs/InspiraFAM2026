@@ -1,0 +1,695 @@
+<!doctype html>
+
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="theme-color"
+    content="#00101d"
+  >
+
+  <title>
+    Mapa — Inspira FAM Experience
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body class="map-page">
+
+
+  <div class="noise"></div>
+
+
+
+  <!-- =========================================================
+       MENU
+  ========================================================= -->
+
+  <header
+    class="site-nav"
+    id="top"
+  >
+
+    <a
+      class="brand-link"
+      href="index.html"
+    >
+
+      <img
+        src="assets/brand/logo-experience-horizontal.png"
+        alt="Inspira FAM Experience"
+      >
+
+    </a>
+
+
+    <nav>
+
+      <a
+        class="nav-link"
+        href="index.html"
+      >
+        Evento
+      </a>
+
+      <a
+        class="nav-link active"
+        href="mapa.html"
+      >
+        Mapa
+      </a>
+
+      <a class="nav-link" href="faq.html">FAQ</a>
+
+      <a
+        class="nav-link nav-cta"
+        href="inscricoes.html"
+      >
+        Inscrições
+        <span>↗</span>
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =========================================================
+         HERO DO MAPA
+    ========================================================= -->
+
+    <section class="map-hero section-dark">
+
+
+      <div class="map-hero-lines"></div>
+
+
+      <div class="map-hero-copy reveal">
+
+        <span class="kicker">
+          MAPA DO EVENTO • 2026
+        </span>
+
+
+        <h1>
+          ENCONTRE.<br>
+          <i>EXPLORE.</i><br>
+          VIVA.
+        </h1>
+
+
+        <p>
+          Descubra onde cada experiência acontece
+          e toque em uma área para saber mais.
+        </p>
+
+
+        <a
+          class="button button-light"
+          href="#mapa-interativo"
+        >
+          VER MAPA
+          <span>↓</span>
+        </a>
+
+      </div>
+
+
+
+      <!-- CÍRCULOS ANIMADOS -->
+
+      <div class="map-orbit">
+
+        <div class="map-orbit-ring ring-1"></div>
+
+        <div class="map-orbit-ring ring-2"></div>
+
+        <div class="map-orbit-ring ring-3"></div>
+
+
+        <img
+          src="assets/brand/mascote-estrela.png"
+          class="map-orbit-mascot"
+          alt=""
+        >
+        <img class="mascot map-extra map-extra-burst" src="assets/brand/mascote-explosao.png" alt="">
+        <img class="mascot map-extra map-extra-triangle" src="assets/brand/mascote-triangulo.png" alt="">
+
+      </div>
+
+
+      <span class="map-hero-word">
+        MAPA
+      </span>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         MAPA INTERATIVO
+    ========================================================= -->
+
+    <section
+      class="event-map-section section-light"
+      id="mapa-interativo"
+    >
+
+
+      <div class="map-section-head reveal">
+
+
+        <div>
+
+          <span class="kicker">
+            ONDE TUDO ACONTECE
+          </span>
+
+          <h2>
+            SEU GUIA<br>
+            <i>PELO EVENTO.</i>
+          </h2>
+
+        </div>
+
+
+        <p>
+          Toque nos espaços para descobrir
+          o que acontece em cada ponto.
+
+          No celular, deslize pelo mapa
+          e explore.
+        </p>
+
+      </div>
+
+
+
+      <div class="event-map-shell reveal">
+
+
+        <!-- BÚSSOLA -->
+
+        <div class="map-compass">
+
+          <span>N</span>
+
+          <i></i>
+
+        </div>
+
+
+
+        <div class="map-plan">
+
+
+          <!-- ROTAS -->
+
+          <div class="map-route route-a"></div>
+
+          <div class="map-route route-b"></div>
+
+
+
+          <!-- ENTRADA -->
+
+          <button
+            class="map-zone zone-entry"
+            type="button"
+            data-map-zone="entrada"
+            data-map-number="01"
+            data-map-title="Entrada"
+            data-map-tone="pink"
+            data-map-text="Seu ponto de chegada ao Inspira FAM. Aqui você encontra a recepção, orientações iniciais e acesso às demais áreas do evento."
+          >
+
+            <span class="map-zone-number">
+              01
+            </span>
+
+            <strong>
+              Entrada
+            </strong>
+
+            <small>
+              comece aqui
+            </small>
+
+          </button>
+
+
+
+          <!-- EXPOSITORES -->
+
+          <button
+            class="map-zone zone-exhibitors"
+            type="button"
+            data-map-zone="expositores"
+            data-map-number="02"
+            data-map-title="Expositores"
+            data-map-tone="purple"
+            data-map-text="Área dedicada a marcas, projetos, produtos e iniciativas. Explore os estandes e conheça novas ideias de perto."
+          >
+
+            <span class="map-zone-number">
+              02
+            </span>
+
+            <strong>
+              Expositores
+            </strong>
+
+            <small>
+              marcas & projetos
+            </small>
+
+          </button>
+
+
+
+          <!-- GASTRONOMIA -->
+
+          <button
+            class="map-zone zone-food"
+            type="button"
+            data-map-zone="gastronomia"
+            data-map-number="03"
+            data-map-title="Gastronomia"
+            data-map-tone="orange"
+            data-map-text="Um espaço para experimentar sabores, fazer uma pausa e aproveitar diferentes opções gastronômicas."
+          >
+
+            <span class="map-zone-number">
+              03
+            </span>
+
+            <strong>
+              Gastronomia
+            </strong>
+
+            <small>
+              sabores & pausa
+            </small>
+
+          </button>
+
+
+
+          <!-- ATIVIDADES -->
+
+          <button
+            class="map-zone zone-activities"
+            type="button"
+            data-map-zone="atividades"
+            data-map-number="04"
+            data-map-title="Atividades"
+            data-map-tone="magenta"
+            data-map-text="Experiências interativas, dinâmicas e ações especiais para participar, experimentar e descobrir."
+          >
+
+            <span class="map-zone-number">
+              04
+            </span>
+
+            <strong>
+              Atividades
+            </strong>
+
+            <small>
+              participe
+            </small>
+
+          </button>
+
+
+
+          <!-- NETWORKING -->
+
+          <button
+            class="map-zone zone-network"
+            type="button"
+            data-map-zone="networking"
+            data-map-number="05"
+            data-map-title="Networking"
+            data-map-tone="blue"
+            data-map-text="Um ponto para encontros, conversas e conexões entre pessoas, marcas e oportunidades."
+          >
+
+            <span class="map-zone-number">
+              05
+            </span>
+
+            <strong>
+              Networking
+            </strong>
+
+            <small>
+              conecte-se
+            </small>
+
+          </button>
+
+
+
+          <!-- PALCO -->
+
+          <button
+            class="map-zone zone-stage"
+            type="button"
+            data-map-zone="palco"
+            data-map-number="06"
+            data-map-title="Palco"
+            data-map-tone="yellow"
+            data-map-text="O centro das apresentações, ativações e momentos coletivos do Inspira FAM Experience."
+          >
+
+            <span class="map-zone-number">
+              06
+            </span>
+
+            <strong>
+              Palco
+            </strong>
+
+            <small>
+              experiências ao vivo
+            </small>
+
+          </button>
+
+
+
+          <!-- BANHEIROS -->
+
+          <button
+            class="map-zone zone-restroom"
+            type="button"
+            data-map-zone="banheiros"
+            data-map-number="07"
+            data-map-title="Banheiros"
+            data-map-tone="navy"
+            data-map-text="Área de apoio e banheiros do evento."
+          >
+
+            <span class="map-zone-number">
+              07
+            </span>
+
+            <strong>
+              Banheiros
+            </strong>
+
+            <small>
+              apoio
+            </small>
+
+          </button>
+
+
+
+          <!-- VOCÊ ESTÁ AQUI -->
+
+          <div class="map-you-are-here">
+
+            <span></span>
+
+            VOCÊ ESTÁ AQUI
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =========================================================
+           LEGENDA
+      ========================================================= -->
+
+      <div class="map-legend reveal">
+
+
+        <div class="map-legend-title">
+
+          <span>
+            LEGENDA
+          </span>
+
+          <strong>
+            7 espaços para explorar
+          </strong>
+
+        </div>
+
+
+
+        <div class="map-legend-grid">
+
+          <button
+            type="button"
+            data-map-jump="entrada"
+          >
+            <i>01</i>
+            Entrada
+          </button>
+
+
+          <button
+            type="button"
+            data-map-jump="expositores"
+          >
+            <i>02</i>
+            Expositores
+          </button>
+
+
+          <button
+            type="button"
+            data-map-jump="gastronomia"
+          >
+            <i>03</i>
+            Gastronomia
+          </button>
+
+
+          <button
+            type="button"
+            data-map-jump="atividades"
+          >
+            <i>04</i>
+            Atividades
+          </button>
+
+
+          <button
+            type="button"
+            data-map-jump="networking"
+          >
+            <i>05</i>
+            Networking
+          </button>
+
+
+          <button
+            type="button"
+            data-map-jump="palco"
+          >
+            <i>06</i>
+            Palco
+          </button>
+
+
+          <button
+            type="button"
+            data-map-jump="banheiros"
+          >
+            <i>07</i>
+            Banheiros
+          </button>
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FINAL
+    ========================================================= -->
+
+    <section class="map-help section-dark">
+
+
+      <div class="map-help-copy reveal">
+
+        <span class="kicker">
+          PRECISA DE AJUDA?
+        </span>
+
+
+        <h2>
+          SE PERDEU?<br>
+          <i>A GENTE TE GUIA.</i>
+        </h2>
+
+
+        <p>
+          Procure a equipe de recepção na entrada
+          do evento ou consulte novamente o mapa
+          durante sua visita.
+        </p>
+
+
+        <a
+          class="button button-pink"
+          href="inscricoes.html"
+        >
+          QUERO PARTICIPAR
+          <span>→</span>
+        </a>
+
+      </div>
+
+
+      <img
+        class="map-help-mascot"
+        src="assets/brand/mascote-quadrado.png"
+        alt=""
+      >
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+
+  <footer class="footer section-dark">
+
+    <img
+      src="assets/brand/logo-experience-horizontal.png"
+      alt="Inspira FAM Experience"
+    >
+
+
+    <div>
+
+      <span>
+        10—12 NOV 2026
+      </span>
+
+      <span>
+        FAM • QUADRA INTERNA
+      </span>
+
+    </div>
+
+
+    <a
+      href="#top"
+      class="back-to-top"
+    >
+      voltar ao topo ↑
+    </a>
+
+  </footer>
+
+
+
+  <!-- =========================================================
+       MODAL MAPA
+  ========================================================= -->
+
+  <dialog
+    class="map-modal"
+    id="map-modal"
+  >
+
+
+    <button
+      class="map-modal-close"
+      type="button"
+    >
+      ×
+    </button>
+
+
+    <div class="map-modal-card">
+
+
+      <span
+        class="map-modal-number"
+        id="map-modal-number"
+      >
+        01
+      </span>
+
+
+      <span class="map-modal-kicker">
+        MAPA DO EVENTO
+      </span>
+
+
+      <h2 id="map-modal-title">
+        Entrada
+      </h2>
+
+
+      <p id="map-modal-text"></p>
+
+
+      <button
+        class="map-modal-action"
+        id="map-modal-action"
+        type="button"
+      >
+        CONTINUAR EXPLORANDO
+        <span>→</span>
+      </button>
+
+
+    </div>
+
+
+    <span class="map-modal-word">
+      VIVA
+    </span>
+
+
+  </dialog>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

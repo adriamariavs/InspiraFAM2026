@@ -1,0 +1,661 @@
+<!doctype html>
+
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    Inscrições — Inspira FAM Experience
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body class="registration-page">
+
+
+  <div class="noise"></div>
+
+
+  <!-- =========================================================
+       MENU
+  ========================================================= -->
+
+  <header
+    class="site-nav"
+    id="top"
+  >
+
+    <a
+      class="brand-link"
+      href="index.html"
+    >
+
+      <img
+        src="assets/brand/logo-experience-horizontal.png"
+        alt="Inspira FAM Experience"
+      >
+
+    </a>
+
+
+    <nav>
+
+      <a
+        class="nav-link"
+        href="index.html"
+      >
+        Evento
+      </a>
+
+      <a
+        class="nav-link"
+        href="mapa.html"
+      >
+        Mapa
+      </a>
+
+      <a class="nav-link" href="faq.html">FAQ</a>
+
+      <a
+        class="nav-link nav-cta active"
+        href="inscricoes.html"
+      >
+        Inscrições
+        <span>↗</span>
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
+
+    <section class="registration-hero section-dark">
+
+      <div class="registration-stripes"></div>
+
+
+      <img
+        class="mascot registration-m1"
+        src="assets/brand/mascote-arco.png"
+        alt=""
+      >
+
+
+      <img
+        class="mascot registration-m2"
+        src="assets/brand/mascote-estrela.png"
+        alt=""
+      >
+      <img class="mascot registration-extra registration-extra-arc" src="assets/brand/mascote-arco.png" alt="">
+      <img class="mascot registration-extra registration-extra-triangle" src="assets/brand/mascote-triangulo.png" alt="">
+
+
+      <div class="registration-title reveal">
+
+        <span class="kicker">
+          INSCRIÇÕES • 2026
+        </span>
+
+
+        <h1>
+          FAÇA PARTE<br>
+          <i>DO EVENTO.</i>
+        </h1>
+
+
+        <p>
+          Escolha como você quer participar.
+        </p>
+
+      </div>
+
+
+      <div class="registration-date">
+        10—12
+        <span>NOV</span>
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         ESCOLHA
+    ========================================================= -->
+
+    <section
+      class="registration-choice section-light"
+      id="escolha"
+    >
+
+      <div class="choice-intro reveal">
+
+        <span>
+          01 / 02
+        </span>
+
+        <h2>
+          DUAS FORMAS<br>
+          <i>DE FAZER PARTE.</i>
+        </h2>
+
+      </div>
+
+
+      <div class="choice-grid">
+
+
+        <!-- VISITANTE -->
+
+        <button
+          class="choice-card choice-visitor reveal"
+          type="button"
+          data-form="visitor"
+        >
+
+          <span class="choice-number">
+            01
+          </span>
+
+
+          <img
+            src="assets/brand/mascote-quadrado.png"
+            class="choice-mascot"
+            alt=""
+          >
+
+
+          <div>
+
+            <span>
+              INSCRIÇÃO COMO VISITANTE
+            </span>
+
+            <h3>
+              Quero viver<br>
+              o InspiraFAM.
+            </h3>
+
+            <p class="choice-description">Para quem quer visitar, explorar as experiências e participar do evento.</p>
+
+          </div>
+
+
+          <strong>
+            QUERO VIVER O INSPIRAFAM
+            <b>→</b>
+          </strong>
+
+        </button>
+
+
+
+        <!-- COMERCIAL -->
+
+        <button
+          class="choice-card choice-commercial reveal"
+          type="button"
+          data-form="commercial"
+        >
+
+          <span class="choice-number">
+            02
+          </span>
+
+
+          <img
+            src="assets/brand/mascote-explosao.png"
+            class="choice-mascot"
+            alt=""
+          >
+
+
+          <div>
+
+            <span>
+              EXPOSITOR • PARCEIRO • PATROCINADOR
+            </span>
+
+            <h3>
+              Quero fazer parte<br>
+              do InspiraFAM.
+            </h3>
+
+            <p class="choice-description">Para marcas, expositores, parceiros e patrocinadores que querem participar do evento.</p>
+
+          </div>
+
+
+          <strong>
+            QUERO FAZER PARTE DO INSPIRAFAM
+            <b>→</b>
+          </strong>
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FORMULÁRIOS
+    ========================================================= -->
+
+    <section
+      class="form-section section-dark is-hidden"
+      id="forms"
+      aria-hidden="true"
+    >
+
+      <div class="form-graphic">
+        <span>INS</span>
+        <i>pira</i>
+        <b>FAM</b>
+      </div>
+
+
+      <div class="form-wrap">
+
+
+        <!-- CABEÇALHO -->
+
+        <div
+          class="form-heading"
+          id="form-heading"
+        >
+
+          <span class="kicker">
+            SEU PRÓXIMO PASSO
+          </span>
+
+
+          <h2 id="form-title">
+            INSCRIÇÃO<br>
+            <i>VISITANTE.</i>
+          </h2>
+
+
+          <p id="form-description">
+            Preencha seus dados para participar.
+          </p>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             FORMULÁRIO VISITANTE
+        ====================================================== -->
+
+        <form
+          id="visitor-form"
+          class="event-form"
+        >
+
+          <label>
+
+            Nome completo
+
+            <input
+              name="nome"
+              type="text"
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            E-mail
+
+            <input
+              name="email"
+              type="email"
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            Telefone / WhatsApp
+
+            <input
+              name="telefone"
+              type="tel"
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            Cidade
+
+            <input
+              name="cidade"
+              type="text"
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            Quantidade de pessoas
+
+            <input
+              name="quantidade"
+              type="number"
+              min="1"
+              value="1"
+              required
+            >
+
+          </label>
+
+
+          <label class="full">
+
+            Observações
+
+            <textarea
+              name="observacoes"
+              rows="4"
+            ></textarea>
+
+          </label>
+
+
+          <button
+            class="button button-pink full"
+            type="submit"
+          >
+            CONFIRMAR INSCRIÇÃO
+            <span>→</span>
+          </button>
+
+        </form>
+
+
+
+        <!-- =====================================================
+             FORMULÁRIO COMERCIAL
+        ====================================================== -->
+
+        <form
+          id="commercial-form"
+          class="event-form"
+        >
+
+          <label>
+
+            Nome da empresa
+
+            <input
+              name="empresa"
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            Nome do responsável
+
+            <input
+              name="responsavel"
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            E-mail
+
+            <input
+              name="email"
+              type="email"
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            Telefone / WhatsApp
+
+            <input
+              name="telefone"
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            Segmento
+
+            <input
+              name="segmento"
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            Tipo de participação
+
+            <input
+              name="tipo"
+              placeholder="Ex.: expositor, parceiro..."
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            Interesse em patrocínio
+
+            <select
+              name="patrocinio"
+              required
+            >
+
+              <option value="">
+                Selecione
+              </option>
+
+              <option>
+                Sim
+              </option>
+
+              <option>
+                Não
+              </option>
+
+              <option>
+                Quero entender as possibilidades
+              </option>
+
+            </select>
+
+          </label>
+
+
+          <label>
+
+            Interesse em vendas / exposição
+
+            <select
+              name="espaco"
+              required
+            >
+
+              <option value="">
+                Selecione
+              </option>
+
+              <option>
+                Sim
+              </option>
+
+              <option>
+                Não
+              </option>
+
+              <option>
+                Quero entender as possibilidades
+              </option>
+
+            </select>
+
+          </label>
+
+
+          <label class="full">
+
+            Mensagem
+
+            <textarea
+              name="mensagem"
+              rows="5"
+            ></textarea>
+
+          </label>
+
+
+          <button
+            class="button button-pink full"
+            type="submit"
+          >
+            ENVIAR INTERESSE
+            <span>→</span>
+          </button>
+
+        </form>
+
+
+
+        <!-- =====================================================
+             MENSAGEM DE SUCESSO
+        ====================================================== -->
+
+        <div
+          class="form-success"
+          id="form-success"
+          hidden
+        >
+
+          <img
+            id="success-mascot"
+            src="assets/brand/mascote-estrela.png"
+            alt=""
+          >
+
+
+          <span id="success-kicker">
+            inscrição confirmada!
+          </span>
+
+
+          <h3 id="success-title">
+            Você está<br>
+            no Inspira FAM.
+          </h3>
+
+
+          <p id="success-description"></p>
+
+
+          <a
+            href="index.html"
+            class="button button-light"
+          >
+            VOLTAR PARA O INÍCIO
+            <span>→</span>
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+
+  <footer class="footer section-dark">
+
+    <img
+      src="assets/brand/logo-experience-horizontal.png"
+      alt="Inspira FAM Experience"
+    >
+
+    <div>
+
+      <span>
+        10—12 NOV 2026
+      </span>
+
+      <span>
+        FAM • QUADRA INTERNA
+      </span>
+
+    </div>
+
+    <a href="index.html">
+      ← voltar ao evento
+    </a>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
