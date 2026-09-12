@@ -6772,3 +6772,129 @@ h1 i {
   .map-extra-burst { width: 52px; left: 12px; bottom: 7%; }
   .map-extra-triangle { width: 44px; right: 18px; top: 24%; }
 }
+
+
+/* =========================================================
+   09. AJUSTES MOBILE-FIRST — REVISÃO 11/09
+   Home + Galeria + Instagram + Mapa + FAQ + Inscrições
+========================================================= */
+
+/* ---------- HOME / HERO: todos os stickers acima da logo ---------- */
+@media (max-width: 620px) {
+  .event-page .hero { min-height: 100svh; padding: 50vh 20px 12vh !important; align-items: flex-start; }
+  .event-page .hero-copy { width: 100%; }
+  .event-page .hero-logo { width: min(92vw, 620px); margin: 14px 0 22px; }
+
+  .event-page .hero-mascot { z-index: 4; opacity: 1 !important; filter: none !important; }
+  .event-page .hero-mascot.m-star { width: 62px !important; top: 18vh !important; right: 10vw !important; left: auto !important; bottom: auto !important; }
+  .event-page .hero-mascot.m-square { width: 52px !important; top: 30vh !important; right: 13vw !important; left: auto !important; bottom: auto !important; }
+  .event-page .hero-sticker-arc { width: 58px !important; top: 23vh !important; left: 8vw !important; right: auto !important; bottom: auto !important; }
+  .event-page .hero-sticker-triangle { width: 46px !important; top: 26vh !important; left: 45vw !important; right: auto !important; bottom: auto !important; }
+  .event-page .hero-sticker-burst { width: 54px !important; top: 36vh !important; left: 34vw !important; right: auto !important; bottom: auto !important; }
+}
+
+/* ---------- PROGRAMAÇÃO: absorve as infos da antiga seção amarela ---------- */
+.schedule-callout { max-width: 780px; }
+.schedule-callout span { color: var(--yellow); }
+.schedule-callout small { display: block; margin-top: 7px; opacity: .62; line-height: 1.45; }
+
+/* ---------- GALERIA: mais respiro + stickers reposicionados ---------- */
+.editorial-gallery.uniform-gallery { gap: 24px !important; }
+.gallery-head { position: relative; z-index: 2; }
+.sticker-gallery-1 { width: 76px !important; right: auto !important; left: clamp(260px, 31vw, 500px) !important; top: 105px !important; opacity: 1 !important; filter: none !important; z-index: 3; }
+.sticker-gallery-2 { width: 68px !important; left: 6vw !important; bottom: 150px !important; opacity: 1 !important; filter: none !important; z-index: 3; }
+
+@media (max-width: 620px) {
+  .editorial-gallery.uniform-gallery { gap: 16px !important; padding-inline: 10px; }
+  .editorial-gallery.uniform-gallery .photo-placeholder { aspect-ratio: 4 / 5; }
+  .sticker-gallery-1 { width: 48px !important; left: auto !important; right: 22px !important; top: 108px !important; }
+  .sticker-gallery-2 { width: 48px !important; left: 18px !important; bottom: 190px !important; }
+  .gallery-marquee { bottom: 35px !important; }
+}
+
+/* ---------- INSTAGRAM: remove mosaico e cria transição branco -> rosa ---------- */
+.social-new {
+  background: linear-gradient(180deg, var(--off) 0%, #ffffff 34%, #ffd4e1 68%, var(--pink) 100%) !important;
+  color: var(--navy) !important;
+  grid-template-columns: 1fr !important;
+  min-height: 700px;
+}
+.social-new::before { display: none !important; }
+.social-new .social-copy { max-width: 860px; }
+.social-new .social-copy h2,
+.social-new .social-copy h2 i,
+.social-new .social-copy p,
+.social-new .social-handle { color: var(--navy) !important; }
+.social-new .button-light { background: var(--navy) !important; color: white !important; }
+.social-new .social-visual { display: none !important; }
+.social-new .social-marquee { color: var(--navy) !important; opacity: .09 !important; }
+
+@media (max-width: 620px) {
+  .social-new { min-height: 640px; padding: 90px 20px 140px !important; }
+  .social-new .social-handle { font-size: clamp(2.4rem, 12vw, 4.6rem) !important; }
+}
+
+/* ---------- MAPA: constelação de 5 stickers acima do texto ---------- */
+.map-orbit-mascot,
+.map-extra { opacity: 1 !important; filter: none !important; z-index: 5; }
+.map-extra-arc,
+.map-extra-square { position: absolute; pointer-events: none; }
+
+@media (max-width: 620px) {
+  .map-hero { min-height: 100svh; padding-top: 50vh !important; }
+  .map-orbit { inset: 0 !important; width: 100% !important; height: 100% !important; pointer-events: none; }
+  .map-orbit-ring { opacity: .14 !important; }
+  .map-orbit-mascot { width: 58px !important; top: 18vh !important; left: 10vw !important; right: auto !important; bottom: auto !important; }
+  .map-extra-burst { width: 48px !important; top: 23vh !important; left: 42vw !important; right: auto !important; bottom: auto !important; }
+  .map-extra-triangle { width: 44px !important; top: 31vh !important; right: 12vw !important; left: auto !important; bottom: auto !important; }
+  .map-extra-arc { width: 54px !important; top: 34vh !important; left: 14vw !important; }
+  .map-extra-square { width: 46px !important; top: 20vh !important; right: 14vw !important; }
+}
+
+/* ---------- FAQ: todos os stickers no topo; limpa o resto ---------- */
+.faq2-content > .faq-sticker,
+.faq2-final > .faq-sticker { display: none !important; }
+.faq2-hero .faq-sticker { opacity: 1 !important; filter: none !important; z-index: 4; }
+.faq-top-burst,
+.faq-top-triangle { position: absolute; pointer-events: none; }
+
+@media (max-width: 620px) {
+  .faq2-hero { min-height: 100svh; padding-top: 49vh !important; }
+  .faq2-copy { position: relative; z-index: 3; }
+  .faq2-hero .faq-sticker-star { width: 58px !important; top: 18vh !important; right: 12vw !important; left: auto !important; bottom: auto !important; }
+  .faq2-hero .faq-sticker-arc { width: 54px !important; top: 30vh !important; left: 10vw !important; right: auto !important; bottom: auto !important; }
+  .faq2-hero .faq-sticker-square { width: 46px !important; top: 22vh !important; left: 47vw !important; right: auto !important; bottom: auto !important; }
+  .faq2-hero .faq-top-burst { width: 48px !important; top: 34vh !important; right: 17vw !important; }
+  .faq2-hero .faq-top-triangle { width: 44px !important; top: 25vh !important; left: 20vw !important; }
+}
+
+/* ---------- INSCRIÇÕES: todos os stickers acima do texto ---------- */
+.registration-hero > .registration-m1,
+.registration-hero > .registration-m2,
+.registration-hero > .registration-extra { display: none !important; }
+.registration-sticker-cloud { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+.registration-top-sticker { position: absolute; display: block; opacity: 1; filter: none; animation: float 5s infinite ease-in-out; }
+.registration-top-star { width: 68px; top: 18%; right: 12%; }
+.registration-top-square { width: 56px; top: 28%; right: 28%; animation-delay: -.8s; }
+.registration-top-arc { width: 64px; top: 22%; left: 10%; animation-delay: -1.2s; }
+.registration-top-triangle { width: 52px; top: 34%; left: 32%; animation-delay: -1.8s; }
+.registration-top-burst { width: 58px; top: 16%; left: 46%; animation-delay: -2.1s; }
+
+#success-mascot { display: none !important; }
+.success-sticker-cloud { width: min(420px, 92%); margin: 0 auto 34px; display: flex; justify-content: center; align-items: center; gap: 14px; }
+.success-sticker-cloud img { width: 56px; max-height: 62px; object-fit: contain; animation: float 5s infinite ease-in-out; }
+.success-sticker-cloud img:nth-child(2) { animation-delay: -.8s; }
+.success-sticker-cloud img:nth-child(3) { animation-delay: -1.5s; }
+.success-sticker-cloud img:nth-child(4) { animation-delay: -2s; }
+.success-sticker-cloud img:nth-child(5) { animation-delay: -2.5s; }
+
+@media (max-width: 620px) {
+  .registration-hero { min-height: 100svh; padding-top: 50vh !important; }
+  .registration-top-star { width: 58px; top: 18vh; right: 10vw; }
+  .registration-top-square { width: 46px; top: 29vh; right: 18vw; }
+  .registration-top-arc { width: 54px; top: 24vh; left: 9vw; }
+  .registration-top-triangle { width: 44px; top: 34vh; left: 38vw; }
+  .registration-top-burst { width: 48px; top: 18vh; left: 45vw; }
+  .success-sticker-cloud { gap: 10px; margin-bottom: 28px; }
+  .success-sticker-cloud img { width: 44px; max-height: 50px; }
+}
