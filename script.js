@@ -351,8 +351,6 @@ const experienceContent = {
   },
 
 
-  /* Compatibilidade com versões anteriores */
-
   expositores: {
 
     number: "06",
@@ -743,8 +741,12 @@ choiceButtons.forEach(
 
 
 /* =========================================================
-   06. ENVIO DOS FORMULÁRIOS
+   06. ENVIO REAL DOS FORMULÁRIOS — GOOGLE SHEETS
 ========================================================= */
+
+const GOOGLE_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbxbSTueVdVNfdViHDP-6d4dbNetiok3GNjG8w5axyjhwZ6ui2hI89c8EG1awpvVl8bQ/exec";
+
 
 [
   visitorForm,
@@ -760,7 +762,7 @@ choiceButtons.forEach(
 
   form.addEventListener(
     "submit",
-    (event) => {
+    async (event) => {
 
 
       event.preventDefault();
@@ -780,129 +782,230 @@ choiceButtons.forEach(
         "commercial-form";
 
 
-      visitorForm?.classList.remove(
-        "active"
+      const submitButton =
+        form.querySelector(
+          'button[type="submit"]'
+        );
+
+
+      const originalButtonHTML =
+        submitButton
+          ? submitButton.innerHTML
+          : "";
+
+
+      if (submitButton) {
+
+        submitButton.disabled = true;
+
+        submitButton.setAttribute(
+          "aria-busy",
+          "true"
+        );
+
+        submitButton.innerHTML =
+          `
+            ENVIANDO...
+            <span>↗</span>
+          `;
+
+      }
+
+
+      const dados =
+        new FormData(form);
+
+
+      dados.append(
+        "tipoFormulario",
+        isCommercial
+          ? "comercial"
+          : "visitante"
       );
 
 
-      commercialForm?.classList.remove(
-        "active"
+      dados.append(
+        "enviadoEm",
+        new Date().toISOString()
       );
 
 
-      if (formHeading) {
+      try {
 
-        formHeading.style.display =
-          "none";
+
+        await fetch(
+          GOOGLE_SCRIPT_URL,
+          {
+            method: "POST",
+            body: dados,
+            mode: "no-cors"
+          }
+        );
+
+
+        visitorForm?.classList.remove(
+          "active"
+        );
+
+
+        commercialForm?.classList.remove(
+          "active"
+        );
+
+
+        if (formHeading) {
+
+          formHeading.style.display =
+            "none";
+
+        }
+
+
+        if (success) {
+
+          success.hidden =
+            false;
+
+        }
+
+
+        if (isCommercial) {
+
+
+          if (successMascot) {
+
+            successMascot.src =
+              "ativo/brand/mascote-explosao.png";
+
+          }
+
+
+          if (successKicker) {
+
+            successKicker.textContent =
+              "interesse recebido!";
+
+          }
+
+
+          if (successTitle) {
+
+            successTitle.innerHTML =
+              `
+                Vamos conversar<br>
+                sobre sua marca.
+              `;
+
+          }
+
+
+          if (successDescription) {
+
+            successDescription.textContent =
+              "Recebemos seu interesse comercial. Nossa equipe analisará as informações e entrará em contato com os próximos passos.";
+
+          }
+
+
+        }
+
+
+        else {
+
+
+          if (successMascot) {
+
+            successMascot.src =
+              "ativo/brand/mascote-estrela.png";
+
+          }
+
+
+          if (successKicker) {
+
+            successKicker.textContent =
+              "inscrição confirmada!";
+
+          }
+
+
+          if (successTitle) {
+
+            successTitle.innerHTML =
+              `
+                Você está<br>
+                no Inspira FAM.
+              `;
+
+          }
+
+
+          if (successDescription) {
+
+            successDescription.textContent =
+              "Sua inscrição como visitante foi registrada. Agora é só se preparar para viver a experiência.";
+
+          }
+
+
+        }
+
+
+        form.reset();
+
+
+        setTimeout(
+          () => {
+
+            success?.scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+            });
+
+          },
+          120
+        );
+
 
       }
 
 
-      if (success) {
-
-        success.hidden = false;
-
-      }
+      catch (error) {
 
 
-
-      /* COMERCIAL */
-
-      if (isCommercial) {
-
-
-        if (successMascot) {
-
-          successMascot.src =
-            "assets/brand/mascote-explosao.png";
-
-        }
+        console.error(
+          "Erro ao enviar inscrição:",
+          error
+        );
 
 
-        if (successKicker) {
-
-          successKicker.textContent =
-            "interesse recebido!";
-
-        }
-
-
-        if (successTitle) {
-
-          successTitle.innerHTML =
-            `
-              Vamos conversar<br>
-              sobre sua marca.
-            `;
-
-        }
-
-
-        if (successDescription) {
-
-          successDescription.textContent =
-            "Recebemos seu interesse comercial. Nossa equipe analisará as informações e entrará em contato com os próximos passos.";
-
-        }
+        alert(
+          "Não foi possível enviar sua inscrição. Verifique sua conexão e tente novamente."
+        );
 
 
       }
 
 
-      /* VISITANTE */
-
-      else {
+      finally {
 
 
-        if (successMascot) {
+        if (submitButton) {
 
-          successMascot.src =
-            "assets/brand/mascote-estrela.png";
+          submitButton.disabled =
+            false;
 
-        }
+          submitButton.removeAttribute(
+            "aria-busy"
+          );
 
-
-        if (successKicker) {
-
-          successKicker.textContent =
-            "inscrição confirmada!";
-
-        }
-
-
-        if (successTitle) {
-
-          successTitle.innerHTML =
-            `
-              Você está<br>
-              no Inspira FAM.
-            `;
-
-        }
-
-
-        if (successDescription) {
-
-          successDescription.textContent =
-            "Sua inscrição como visitante foi registrada. Agora é só se preparar para viver a experiência.";
+          submitButton.innerHTML =
+            originalButtonHTML;
 
         }
 
 
       }
-
-
-      setTimeout(
-        () => {
-
-          success?.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-          });
-
-        },
-        100
-      );
 
 
     }
