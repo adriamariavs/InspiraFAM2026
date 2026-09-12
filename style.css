@@ -6898,3 +6898,98 @@ h1 i {
   .success-sticker-cloud { gap: 10px; margin-bottom: 28px; }
   .success-sticker-cloud img { width: 44px; max-height: 50px; }
 }
+
+/* =========================================================
+   AJUSTES FINAIS MOBILE — 11/09/2026
+========================================================= */
+
+/* INSTAGRAM — fundo limpo e transição curta */
+.social-new {
+  background: var(--off) !important;
+  color: var(--navy) !important;
+  min-height: 700px;
+  position: relative;
+  overflow: hidden;
+}
+.social-new::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 95px;
+  background: var(--pink);
+  z-index: 0;
+}
+.social-new .social-copy { position: relative; z-index: 2; }
+.social-new .social-copy h2,
+.social-new .social-copy h2 i,
+.social-new .social-copy p,
+.social-new .social-handle { color: var(--navy) !important; }
+.social-new .button-light { background: var(--navy) !important; color: #fff !important; }
+.social-new .social-marquee { color: var(--navy) !important; opacity: .06 !important; z-index: 1; }
+
+/* MAPA — stickers vivos */
+.map-orbit-mascot,
+.map-extra {
+  opacity: 1 !important;
+  filter: saturate(1.35) brightness(1.12) drop-shadow(0 8px 16px rgba(0,0,0,.18)) !important;
+}
+
+/* GALERIA — respiro antes do marquee */
+.gallery { padding-bottom: 190px !important; }
+.editorial-gallery.uniform-gallery { gap: 28px !important; margin-bottom: 100px !important; }
+.sticker-gallery-1 {
+  opacity: 1 !important;
+  filter: saturate(1.35) brightness(1.1) drop-shadow(0 7px 14px rgba(0,0,0,.18)) !important;
+}
+.sticker-gallery-2 {
+  opacity: 1 !important;
+  filter: saturate(1.3) brightness(1.1) drop-shadow(0 7px 14px rgba(0,0,0,.18)) !important;
+  bottom: 245px !important;
+}
+.gallery-marquee { bottom: 55px !important; }
+
+/* FAQ — stickers vivos */
+.faq2-hero .faq-sticker {
+  opacity: 1 !important;
+  filter: saturate(1.35) brightness(1.12) drop-shadow(0 7px 14px rgba(0,0,0,.18)) !important;
+}
+
+@media (max-width: 620px) {
+  .social-new {
+    min-height: 660px;
+    padding: 90px 20px 145px !important;
+  }
+  .social-new::after { height: 75px; }
+  .social-new .social-handle { font-size: clamp(2.3rem, 11vw, 4.2rem) !important; }
+
+  .map-orbit-mascot,
+  .map-extra {
+    opacity: 1 !important;
+    filter: saturate(1.45) brightness(1.18) drop-shadow(0 6px 12px rgba(0,0,0,.2)) !important;
+  }
+  .map-orbit-mascot { width: 60px !important; top: 18vh !important; left: 9vw !important; right: auto !important; bottom: auto !important; }
+  .map-extra-burst { width: 50px !important; top: 21vh !important; left: 43vw !important; right: auto !important; bottom: auto !important; }
+  .map-extra-square { width: 48px !important; top: 20vh !important; right: 13vw !important; left: auto !important; bottom: auto !important; }
+  .map-extra-arc { width: 56px !important; top: 31vh !important; left: 11vw !important; right: auto !important; bottom: auto !important; }
+  .map-extra-triangle { width: 46px !important; top: 28vh !important; right: 10vw !important; left: auto !important; bottom: auto !important; }
+
+  .gallery { padding-bottom: 180px !important; }
+  .editorial-gallery.uniform-gallery { gap: 18px !important; margin-bottom: 110px !important; padding-inline: 12px !important; }
+  .editorial-gallery.uniform-gallery .photo-placeholder { aspect-ratio: 4 / 5; }
+  .sticker-gallery-1 { width: 50px !important; top: 110px !important; right: 18px !important; left: auto !important; }
+  .sticker-gallery-2 { width: 50px !important; left: 20px !important; bottom: 215px !important; }
+  .gallery-marquee { bottom: 55px !important; }
+
+  .faq2-hero .faq-sticker-star { width: 60px !important; top: 18vh !important; right: 10vw !important; left: auto !important; }
+  .faq2-hero .faq-sticker-square { width: 48px !important; top: 22vh !important; left: 48vw !important; right: auto !important; }
+  .faq2-hero .faq-sticker-arc { width: 56px !important; top: 31vh !important; left: 8vw !important; right: auto !important; bottom: auto !important; }
+  .faq2-hero .faq-top-burst { width: 50px !important; top: 33vh !important; right: 13vw !important; left: auto !important; }
+  .faq2-hero .faq-top-triangle { width: 45px !important; top: 24vh !important; left: 24vw !important; right: auto !important; }
+}
+
+.map-page .mascot,
+.faq-page .mascot,
+.event-page .mascot,
+.registration-page .mascot { opacity: 1; }
