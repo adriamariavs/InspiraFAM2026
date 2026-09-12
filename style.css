@@ -6605,54 +6605,261 @@ h1 i {
 }
 
 /* =========================================================
-   09. AJUSTES CONSOLIDADOS — MOBILE FIRST
-   Home + Galeria + Instagram + Mapa + FAQ + Inscrições
-   Revisão final sem blocos duplicados de correção.
+   09. STICKERS EXTRAS — INSPIRA FAM 2026
+   Mantém os mascotes espalhados sem atrapalhar leitura.
 ========================================================= */
 
-/* ---------------------------------------------------------
-   STICKERS — BASE
---------------------------------------------------------- */
 .section-sticker,
 .faq-sticker,
-.registration-top-sticker,
+.registration-extra,
 .map-extra {
   position: absolute;
-  z-index: 5;
+  z-index: 3;
   pointer-events: none;
   user-select: none;
-  opacity: 1;
-  filter: none;
+  filter: drop-shadow(0 14px 28px rgba(0,0,0,.15));
 }
 
-/* ---------------------------------------------------------
-   HOME — HERO
-   Todos os stickers concentrados acima da logo no mobile.
---------------------------------------------------------- */
+/* HERO — todos os stickers da identidade */
 .hero-sticker-arc {
   width: 82px;
   left: 7vw;
-  top: 24vh;
+  bottom: 11vh;
   animation: float 6.4s infinite ease-in-out;
 }
-
 .hero-sticker-triangle {
   width: 72px;
-  left: 47vw;
-  top: 18vh;
+  left: 49vw;
+  top: 16vh;
   animation: float 5.2s .4s infinite ease-in-out;
 }
-
 .hero-sticker-burst {
   width: 76px;
-  right: 26vw;
-  top: 32vh;
+  right: 27vw;
+  bottom: 9vh;
   animation: float 7s .8s infinite ease-in-out;
 }
 
-/* ---------------------------------------------------------
-   PROGRAMAÇÃO — mantém aparência, só acomoda as infos extras.
---------------------------------------------------------- */
+/* Galeria */
+.gallery { position: relative; }
+.sticker-gallery-1 {
+  width: 92px;
+  right: 5vw;
+  top: 8%;
+  transform: rotate(11deg);
+  animation: float 6s infinite ease-in-out;
+}
+.sticker-gallery-2 {
+  width: 78px;
+  left: 4vw;
+  bottom: 9%;
+  transform: rotate(-13deg);
+  animation: float 7s .6s infinite ease-in-out;
+}
+
+/* FAQ */
+.faq2-hero,
+.faq2-content,
+.faq2-final { position: relative; overflow: hidden; }
+
+.faq-sticker-star {
+  width: 88px;
+  right: 8vw;
+  top: 18%;
+  animation: float 5.5s infinite ease-in-out;
+}
+.faq-sticker-arc {
+  width: 76px;
+  left: 4vw;
+  bottom: 8%;
+  animation: float 6.8s .4s infinite ease-in-out;
+}
+.faq-sticker-square {
+  width: 68px;
+  right: 30vw;
+  bottom: 11%;
+  animation: float 5.8s .8s infinite ease-in-out;
+}
+.faq-sticker-burst {
+  width: 82px;
+  left: 42%;
+  top: 7%;
+  animation: float 6.2s .3s infinite ease-in-out;
+}
+.faq-sticker-triangle {
+  width: 70px;
+  right: 3vw;
+  bottom: 8%;
+  animation: float 7s .9s infinite ease-in-out;
+}
+.faq-sticker-final-star {
+  width: 96px;
+  right: 8vw;
+  top: 18%;
+  animation: float 5.4s infinite ease-in-out;
+}
+.faq-sticker-final-square {
+  width: 72px;
+  left: 6vw;
+  bottom: 12%;
+  animation: float 6.5s .6s infinite ease-in-out;
+}
+
+/* Inscrições */
+.registration-hero { position: relative; overflow: hidden; }
+.registration-extra-arc {
+  width: 72px;
+  left: 13vw;
+  bottom: 10%;
+  animation: float 6.5s .4s infinite ease-in-out;
+}
+.registration-extra-triangle {
+  width: 66px;
+  right: 28vw;
+  top: 22%;
+  animation: float 5.4s .8s infinite ease-in-out;
+}
+
+/* Mapa */
+.map-hero { position: relative; overflow: hidden; }
+.map-extra-burst {
+  width: 82px;
+  left: 7vw;
+  bottom: 10%;
+  animation: float 6.2s .5s infinite ease-in-out;
+}
+.map-extra-triangle {
+  width: 68px;
+  right: 30vw;
+  top: 19%;
+  animation: float 5.5s .9s infinite ease-in-out;
+}
+
+@media (max-width: 900px) {
+  .hero-sticker-arc { left: 4vw; bottom: 8vh; width: 60px; }
+  .hero-sticker-triangle { left: 54vw; top: 18vh; width: 56px; }
+  .hero-sticker-burst { right: 22vw; bottom: 12vh; width: 58px; }
+
+  .faq-sticker-star { width: 66px; right: 5vw; top: 20%; }
+  .faq-sticker-arc { width: 58px; left: 3vw; bottom: 5%; }
+  .faq-sticker-square { width: 52px; right: 24vw; bottom: 8%; }
+  .faq-sticker-burst { width: 58px; left: auto; right: 4vw; top: 5%; opacity: .65; }
+  .faq-sticker-triangle { width: 52px; right: 5vw; bottom: 4%; opacity: .6; }
+
+  .registration-extra,
+  .map-extra { opacity: .8; }
+}
+
+@media (max-width: 620px) {
+  .hero-sticker-arc { width: 48px; left: 5vw; bottom: 9vh; opacity: .92; }
+  .hero-sticker-triangle { width: 45px; left: auto; right: 33vw; top: 19vh; opacity: .9; }
+  .hero-sticker-burst { width: 46px; right: 20vw; bottom: 13vh; opacity: .9; }
+
+  .sticker-gallery-1 { width: 58px; right: -10px; top: 5%; opacity: .7; }
+  .sticker-gallery-2 { width: 52px; left: -8px; bottom: 5%; opacity: .65; }
+
+  .faq-sticker-star { width: 52px; right: 18px; top: 18%; opacity: .9; }
+  .faq-sticker-arc { width: 46px; left: 12px; bottom: 5%; opacity: .65; }
+  .faq-sticker-square { width: 44px; right: 28%; bottom: 7%; opacity: .65; }
+  .faq-sticker-burst { width: 48px; right: 10px; top: 3%; opacity: .35; }
+  .faq-sticker-triangle { width: 44px; right: 12px; bottom: 2%; opacity: .4; }
+  .faq-sticker-final-star { width: 62px; right: 12px; top: 14%; opacity: .8; }
+  .faq-sticker-final-square { width: 50px; left: 10px; bottom: 8%; opacity: .7; }
+
+  .registration-extra-arc { width: 46px; left: 12px; bottom: 7%; }
+  .registration-extra-triangle { width: 44px; right: 16px; top: 26%; }
+
+  .map-extra-burst { width: 52px; left: 12px; bottom: 7%; }
+  .map-extra-triangle { width: 44px; right: 18px; top: 24%; }
+}
+
+/* =========================================================
+   09. AJUSTES MOBILE-FIRST — CORREÇÃO REAL 12/09
+   Baseado diretamente no style.css enviado pela usuária.
+
+   CORRIGE:
+   01. Instagram sem degradê branco/rosa
+   02. Stickers do mapa com cor/contraste de verdade
+   03. Galeria com mais distância antes do marquee
+   04. Arco e triângulo do FAQ realmente separados
+   05. Mantém os ajustes mobile já aprovados
+========================================================= */
+
+
+/* =========================================================
+   HOME / HERO — STICKERS ACIMA DA LOGO
+========================================================= */
+
+@media (max-width: 620px) {
+
+  .event-page .hero {
+    min-height: 100svh;
+    padding: 50vh 20px 12vh !important;
+    align-items: flex-start;
+  }
+
+  .event-page .hero-copy {
+    width: 100%;
+  }
+
+  .event-page .hero-logo {
+    width: min(92vw, 620px);
+    margin: 14px 0 22px;
+  }
+
+  .event-page .hero-mascot,
+  .event-page .section-sticker {
+    z-index: 6;
+    opacity: 1 !important;
+    filter: saturate(1.12) brightness(1.05) drop-shadow(0 8px 16px rgba(0,0,0,.20)) !important;
+  }
+
+  .event-page .hero-mascot.m-star {
+    width: 62px !important;
+    top: 18vh !important;
+    right: 10vw !important;
+    left: auto !important;
+    bottom: auto !important;
+  }
+
+  .event-page .hero-mascot.m-square {
+    width: 52px !important;
+    top: 30vh !important;
+    right: 13vw !important;
+    left: auto !important;
+    bottom: auto !important;
+  }
+
+  .event-page .hero-sticker-arc {
+    width: 58px !important;
+    top: 23vh !important;
+    left: 8vw !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  .event-page .hero-sticker-triangle {
+    width: 46px !important;
+    top: 26vh !important;
+    left: 45vw !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  .event-page .hero-sticker-burst {
+    width: 54px !important;
+    top: 36vh !important;
+    left: 34vw !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+}
+
+
+/* =========================================================
+   PROGRAMAÇÃO
+========================================================= */
+
 .schedule-callout {
   max-width: 780px;
 }
@@ -6668,81 +6875,37 @@ h1 i {
   line-height: 1.45;
 }
 
-/* ---------------------------------------------------------
-   GALERIA — mais respiro entre fotos, stickers e marquee.
---------------------------------------------------------- */
-.gallery {
-  position: relative;
-  padding-bottom: 230px !important;
-}
 
-.editorial-gallery.uniform-gallery {
-  gap: 28px !important;
-  margin-bottom: 130px !important;
-}
+/* =========================================================
+   01. INSTAGRAM — SEM DEGRADÊ
+   Antes havia:
+   linear-gradient(... branco -> rosa ...)
+   Agora a seção é clara e limpa.
+========================================================= */
 
-.gallery-head {
-  position: relative;
-  z-index: 2;
-}
-
-.sticker-gallery-1 {
-  width: 76px !important;
-  left: clamp(270px, 31vw, 500px) !important;
-  right: auto !important;
-  top: 108px !important;
-  opacity: 1 !important;
-  filter: none !important;
-  z-index: 5;
-  animation: float 6s infinite ease-in-out;
-}
-
-.sticker-gallery-2 {
-  width: 68px !important;
-  left: 6vw !important;
-  bottom: 270px !important;
-  opacity: 1 !important;
-  filter: none !important;
-  z-index: 5;
-  animation: float 7s .6s infinite ease-in-out;
-}
-
-.gallery-marquee {
-  bottom: 62px !important;
-}
-
-/* ---------------------------------------------------------
-   INSTAGRAM — sem degradê.
-   Fundo claro limpo + faixa rosa sólida no final.
---------------------------------------------------------- */
 .social-new {
   position: relative;
-  min-height: 700px;
-  padding: 110px 7vw 150px !important;
+  min-height: 680px;
   background: var(--off) !important;
   color: var(--navy) !important;
   grid-template-columns: 1fr !important;
   overflow: hidden;
 }
 
+/* remove qualquer decoração antiga que recrie o degradê/mosaico */
 .social-new::before {
   display: none !important;
+  content: none !important;
 }
 
 .social-new::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 82px;
-  background: var(--pink);
-  z-index: 0;
+  display: none !important;
+  content: none !important;
 }
 
 .social-new .social-copy {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   max-width: 860px;
 }
 
@@ -6751,10 +6914,6 @@ h1 i {
 .social-new .social-copy p,
 .social-new .social-handle {
   color: var(--navy) !important;
-}
-
-.social-new .social-handle {
-  border-bottom-color: var(--pink) !important;
 }
 
 .social-new .button-light {
@@ -6766,26 +6925,44 @@ h1 i {
   display: none !important;
 }
 
+/* o texto rolando continua discreto, sem criar mancha rosa */
 .social-new .social-marquee {
-  color: var(--navy) !important;
-  opacity: .055 !important;
-  bottom: 96px !important;
-  z-index: 1;
+  color: var(--pink) !important;
+  opacity: .10 !important;
 }
 
-/* ---------------------------------------------------------
-   MAPA — stickers vivos e todos acima do texto no mobile.
---------------------------------------------------------- */
-.map-hero {
-  position: relative;
-  overflow: hidden;
+@media (max-width: 620px) {
+
+  .social-new {
+    min-height: 610px;
+    padding: 86px 20px 110px !important;
+    background: var(--off) !important;
+  }
+
+  .social-new .social-handle {
+    font-size: clamp(2.35rem, 11vw, 4.4rem) !important;
+  }
 }
 
-.map-orbit-mascot,
-.map-extra {
+
+/* =========================================================
+   02. MAPA — STICKERS VIVOS E LEGÍVEIS
+========================================================= */
+
+/* impede as regras antigas de deixarem os stickers apagados */
+.map-page .map-orbit-mascot,
+.map-page .map-extra,
+.map-page .map-extra-burst,
+.map-page .map-extra-triangle,
+.map-page .map-extra-arc,
+.map-page .map-extra-square {
   opacity: 1 !important;
-  filter: none !important;
-  z-index: 5 !important;
+  z-index: 8 !important;
+  filter:
+    saturate(1.55)
+    brightness(1.18)
+    contrast(1.08)
+    drop-shadow(0 10px 18px rgba(0,0,0,.28)) !important;
 }
 
 .map-extra-arc,
@@ -6794,25 +6971,177 @@ h1 i {
   pointer-events: none;
 }
 
-/* ---------------------------------------------------------
-   FAQ — só os 5 stickers do hero.
---------------------------------------------------------- */
-.faq2-hero,
-.faq2-content,
-.faq2-final {
-  position: relative;
-  overflow: hidden;
+@media (max-width: 620px) {
+
+  .map-hero {
+    min-height: 100svh;
+    padding-top: 50vh !important;
+  }
+
+  .map-hero-copy {
+    position: relative;
+    z-index: 6;
+  }
+
+  .map-orbit {
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none;
+  }
+
+  /* os círculos continuam ao fundo; só os stickers ficam fortes */
+  .map-orbit-ring {
+    opacity: .10 !important;
+  }
+
+  .map-page .map-orbit-mascot {
+    width: 62px !important;
+    top: 18vh !important;
+    left: 9vw !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  .map-page .map-extra-burst {
+    width: 54px !important;
+    top: 23vh !important;
+    left: 43vw !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  .map-page .map-extra-square {
+    width: 50px !important;
+    top: 19vh !important;
+    right: 10vw !important;
+    left: auto !important;
+    bottom: auto !important;
+  }
+
+  .map-page .map-extra-arc {
+    width: 58px !important;
+    top: 33vh !important;
+    left: 10vw !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  .map-page .map-extra-triangle {
+    width: 48px !important;
+    top: 31vh !important;
+    right: 11vw !important;
+    left: auto !important;
+    bottom: auto !important;
+  }
 }
+
+
+/* =========================================================
+   03. GALERIA — MAIS RESPIRO
+========================================================= */
+
+.gallery {
+  position: relative;
+  padding-bottom: 150px !important;
+}
+
+.gallery-head {
+  position: relative;
+  z-index: 3;
+}
+
+.editorial-gallery.uniform-gallery {
+  gap: 26px !important;
+}
+
+/* explosão ao lado do título, com distância real */
+.sticker-gallery-1 {
+  width: 74px !important;
+  left: clamp(280px, 32vw, 515px) !important;
+  right: auto !important;
+  top: 108px !important;
+  opacity: 1 !important;
+  z-index: 5 !important;
+  filter:
+    saturate(1.25)
+    brightness(1.08)
+    drop-shadow(0 8px 16px rgba(0,0,0,.20)) !important;
+}
+
+/* arco acima da faixa e bem afastado dela */
+.sticker-gallery-2 {
+  width: 66px !important;
+  left: 6vw !important;
+  bottom: 245px !important;
+  opacity: 1 !important;
+  z-index: 5 !important;
+  filter:
+    saturate(1.2)
+    brightness(1.08)
+    drop-shadow(0 8px 16px rgba(0,0,0,.18)) !important;
+}
+
+/* ESTA é a mudança que cria espaço real antes do "INSPIRA EXPERIENCE" */
+.gallery-marquee {
+  position: relative !important;
+  bottom: auto !important;
+  margin-top: 150px !important;
+}
+
+@media (max-width: 620px) {
+
+  .gallery {
+    padding-bottom: 115px !important;
+  }
+
+  .editorial-gallery.uniform-gallery {
+    gap: 18px !important;
+    padding-inline: 8px;
+  }
+
+  .editorial-gallery.uniform-gallery .photo-placeholder {
+    aspect-ratio: 4 / 5;
+  }
+
+  .sticker-gallery-1 {
+    width: 50px !important;
+    left: auto !important;
+    right: 18px !important;
+    top: 110px !important;
+  }
+
+  .sticker-gallery-2 {
+    width: 50px !important;
+    left: 18px !important;
+    bottom: 210px !important;
+  }
+
+  .gallery-marquee {
+    bottom: auto !important;
+    margin-top: 125px !important;
+  }
+}
+
+
+/* =========================================================
+   04. FAQ — ARCO E TRIÂNGULO REALMENTE SEPARADOS
+========================================================= */
 
 .faq2-content > .faq-sticker,
 .faq2-final > .faq-sticker {
   display: none !important;
 }
 
-.faq2-hero .faq-sticker {
+.faq2-hero .faq-sticker,
+.faq2-hero .faq-top-burst,
+.faq2-hero .faq-top-triangle {
   opacity: 1 !important;
-  filter: none !important;
-  z-index: 5 !important;
+  z-index: 7 !important;
+  filter:
+    saturate(1.25)
+    brightness(1.08)
+    drop-shadow(0 8px 16px rgba(0,0,0,.18)) !important;
 }
 
 .faq-top-burst,
@@ -6821,13 +7150,64 @@ h1 i {
   pointer-events: none;
 }
 
-/* ---------------------------------------------------------
-   INSCRIÇÕES — stickers concentrados no topo.
---------------------------------------------------------- */
-.registration-hero {
-  position: relative;
-  overflow: hidden;
+@media (max-width: 620px) {
+
+  .faq2-hero {
+    min-height: 100svh;
+    padding-top: 49vh !important;
+  }
+
+  .faq2-copy {
+    position: relative;
+    z-index: 5;
+  }
+
+  .faq2-hero .faq-sticker-star {
+    width: 58px !important;
+    top: 18vh !important;
+    right: 10vw !important;
+    left: auto !important;
+    bottom: auto !important;
+  }
+
+  .faq2-hero .faq-sticker-square {
+    width: 46px !important;
+    top: 21vh !important;
+    left: 47vw !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  /* ARCO: extremo esquerdo e mais baixo */
+  .faq2-hero .faq-sticker-arc {
+    width: 56px !important;
+    top: 32vh !important;
+    left: 5vw !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  .faq2-hero .faq-top-burst {
+    width: 50px !important;
+    top: 34vh !important;
+    right: 15vw !important;
+    left: auto !important;
+  }
+
+  /* TRIÂNGULO: lado direito/superior — longe do arco */
+  .faq2-hero .faq-top-triangle {
+    width: 46px !important;
+    top: 25vh !important;
+    left: auto !important;
+    right: 25vw !important;
+    bottom: auto !important;
+  }
 }
+
+
+/* =========================================================
+   INSCRIÇÕES — MANTÉM STICKERS ACIMA DO TEXTO
+========================================================= */
 
 .registration-hero > .registration-m1,
 .registration-hero > .registration-m2,
@@ -6838,14 +7218,15 @@ h1 i {
 .registration-sticker-cloud {
   position: absolute;
   inset: 0;
-  z-index: 4;
+  z-index: 3;
   pointer-events: none;
 }
 
 .registration-top-sticker {
+  position: absolute;
   display: block;
   opacity: 1 !important;
-  filter: none !important;
+  filter: saturate(1.15) brightness(1.06) drop-shadow(0 8px 16px rgba(0,0,0,.18));
   animation: float 5s infinite ease-in-out;
 }
 
@@ -6900,8 +7281,6 @@ h1 i {
   width: 56px;
   max-height: 62px;
   object-fit: contain;
-  opacity: 1;
-  filter: none;
   animation: float 5s infinite ease-in-out;
 }
 
@@ -6910,307 +7289,50 @@ h1 i {
 .success-sticker-cloud img:nth-child(4) { animation-delay: -2s; }
 .success-sticker-cloud img:nth-child(5) { animation-delay: -2.5s; }
 
-/* =========================================================
-   TABLET
-========================================================= */
-@media (max-width: 900px) {
-  .map-orbit-mascot,
-  .map-extra,
-  .faq2-hero .faq-sticker,
-  .registration-top-sticker {
-    opacity: 1 !important;
-  }
-}
-
-/* =========================================================
-   MOBILE — FOCO PRINCIPAL
-========================================================= */
 @media (max-width: 620px) {
 
-  /* HOME */
-  .event-page .hero {
-    min-height: 100svh;
-    padding: 50vh 20px 12vh !important;
-    align-items: flex-start;
-  }
-
-  .event-page .hero-copy {
-    width: 100%;
-  }
-
-  .event-page .hero-logo {
-    width: min(92vw, 620px);
-    margin: 14px 0 22px;
-  }
-
-  .event-page .hero-mascot {
-    z-index: 5;
-    opacity: 1 !important;
-    filter: none !important;
-  }
-
-  .event-page .hero-mascot.m-star {
-    width: 58px !important;
-    top: 18vh !important;
-    left: 8vw !important;
-    right: auto !important;
-    bottom: auto !important;
-  }
-
-  .event-page .hero-sticker-triangle {
-    width: 43px !important;
-    top: 20vh !important;
-    left: 36vw !important;
-    right: auto !important;
-    bottom: auto !important;
-  }
-
-  .event-page .hero-sticker-burst {
-    width: 50px !important;
-    top: 19vh !important;
-    left: 58vw !important;
-    right: auto !important;
-    bottom: auto !important;
-  }
-
-  .event-page .hero-mascot.m-square {
-    width: 47px !important;
-    top: 29vh !important;
-    right: 10vw !important;
-    left: auto !important;
-    bottom: auto !important;
-  }
-
-  .event-page .hero-sticker-arc {
-    width: 52px !important;
-    top: 31vh !important;
-    left: 14vw !important;
-    right: auto !important;
-    bottom: auto !important;
-  }
-
-  /* GALERIA */
-  .gallery {
-    padding-bottom: 235px !important;
-  }
-
-  .editorial-gallery.uniform-gallery {
-    gap: 20px 18px !important;
-    margin-bottom: 145px !important;
-    padding-inline: 14px !important;
-  }
-
-  .editorial-gallery.uniform-gallery .photo-placeholder {
-    aspect-ratio: 4 / 5;
-  }
-
-  .sticker-gallery-1 {
-    width: 50px !important;
-    top: 106px !important;
-    right: 20px !important;
-    left: auto !important;
-  }
-
-  .sticker-gallery-2 {
-    width: 50px !important;
-    left: 22px !important;
-    bottom: 255px !important;
-  }
-
-  .gallery-marquee {
-    bottom: 58px !important;
-  }
-
-  /* INSTAGRAM */
-  .social-new {
-    min-height: 650px;
-    padding: 90px 20px 145px !important;
-    background: var(--off) !important;
-  }
-
-  .social-new::after {
-    height: 72px;
-  }
-
-  .social-new .social-handle {
-    font-size: clamp(2.25rem, 10.8vw, 4.1rem) !important;
-  }
-
-  .social-new .social-marquee {
-    bottom: 85px !important;
-  }
-
-  /* MAPA */
-  .map-hero {
-    min-height: 100svh;
-    padding-top: 50vh !important;
-  }
-
-  .map-orbit {
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    pointer-events: none;
-  }
-
-  .map-orbit-ring {
-    opacity: .08 !important;
-  }
-
-  .map-orbit-mascot,
-  .map-extra {
-    opacity: 1 !important;
-    filter: none !important;
-  }
-
-  .map-orbit-mascot {
-    width: 58px !important;
-    top: 18vh !important;
-    left: 10vw !important;
-    right: auto !important;
-    bottom: auto !important;
-  }
-
-  .map-extra-burst {
-    width: 48px !important;
-    top: 20vh !important;
-    left: 42vw !important;
-    right: auto !important;
-    bottom: auto !important;
-  }
-
-  .map-extra-square {
-    width: 46px !important;
-    top: 19vh !important;
-    right: 11vw !important;
-    left: auto !important;
-    bottom: auto !important;
-  }
-
-  .map-extra-arc {
-    width: 54px !important;
-    top: 31vh !important;
-    left: 12vw !important;
-    right: auto !important;
-    bottom: auto !important;
-  }
-
-  .map-extra-triangle {
-    width: 43px !important;
-    top: 30vh !important;
-    right: 13vw !important;
-    left: auto !important;
-    bottom: auto !important;
-  }
-
-  /* FAQ */
-  .faq2-hero {
-    min-height: 100svh;
-    padding-top: 50vh !important;
-  }
-
-  .faq2-copy {
-    position: relative;
-    z-index: 3;
-  }
-
-  .faq2-hero .faq-sticker-star {
-    width: 58px !important;
-    top: 18vh !important;
-    right: 10vw !important;
-    left: auto !important;
-    bottom: auto !important;
-  }
-
-  .faq2-hero .faq-sticker-square {
-    width: 46px !important;
-    top: 20vh !important;
-    left: 48vw !important;
-    right: auto !important;
-    bottom: auto !important;
-  }
-
-  /* arco bem separado do triângulo */
-  .faq2-hero .faq-sticker-arc {
-    width: 54px !important;
-    top: 31vh !important;
-    left: 8vw !important;
-    right: auto !important;
-    bottom: auto !important;
-  }
-
-  .faq2-hero .faq-top-triangle {
-    width: 43px !important;
-    top: 24vh !important;
-    left: 26vw !important;
-    right: auto !important;
-    bottom: auto !important;
-  }
-
-  .faq2-hero .faq-top-burst {
-    width: 48px !important;
-    top: 32vh !important;
-    right: 14vw !important;
-    left: auto !important;
-    bottom: auto !important;
-  }
-
-  /* INSCRIÇÕES */
   .registration-hero {
     min-height: 100svh;
     padding-top: 50vh !important;
   }
 
   .registration-top-star {
-    width: 56px;
+    width: 58px;
     top: 18vh;
     right: 10vw;
   }
 
   .registration-top-square {
-    width: 45px;
-    top: 20vh;
-    left: 46vw;
-    right: auto;
+    width: 46px;
+    top: 29vh;
+    right: 18vw;
   }
 
   .registration-top-arc {
-    width: 52px;
-    top: 31vh;
+    width: 54px;
+    top: 24vh;
     left: 9vw;
   }
 
   .registration-top-triangle {
-    width: 42px;
-    top: 30vh;
-    right: 12vw;
-    left: auto;
+    width: 44px;
+    top: 34vh;
+    left: 38vw;
   }
 
   .registration-top-burst {
-    width: 47px;
-    top: 19vh;
-    left: 25vw;
+    width: 48px;
+    top: 18vh;
+    left: 45vw;
   }
 
   .success-sticker-cloud {
-    gap: 11px;
-    margin-bottom: 30px;
+    gap: 10px;
+    margin-bottom: 28px;
   }
 
   .success-sticker-cloud img {
     width: 44px;
     max-height: 50px;
   }
-}
-
-/* =========================================================
-   GARANTIAS FINAIS
-========================================================= */
-.map-page .mascot,
-.faq-page .mascot,
-.faq-page-v2 .mascot,
-.event-page .mascot,
-.registration-page .mascot {
-  opacity: 1;
 }
