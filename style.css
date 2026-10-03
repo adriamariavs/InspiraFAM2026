@@ -1958,3 +1958,27 @@ p,small,strong,label,h1,h2,h3{overflow-wrap:break-word}
 /* 15. INSCRIÇÕES — somente visitantes */
 .choice-grid.visitor-only{grid-template-columns:minmax(0,1fr);max-width:850px;margin:30px auto 0}
 .visitor-only .choice-card{min-height:320px}
+
+/* 16. INSCRIÇÃO DIRETA — card visível logo após a navegação. */
+.page-registration .registration-direct{padding:150px var(--pad) 70px;min-height:75svh;display:flex;align-items:center}
+.registration-direct .choice-grid{width:100%;margin:0 auto}
+.registration-direct .choice-card{gap:24px;padding:clamp(26px,5vw,54px)}
+.registration-direct h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.05;margin:0}
+.registration-direct .choice-card p{margin:0;line-height:1.6}
+.registration-direct .choice-card b{margin-top:12px;line-height:1.5}
+@media(max-width:600px){.page-registration .registration-direct{padding:130px var(--pad) 50px;min-height:70svh}}
+
+/* 17. STICKERS DO CARD — colunas no desktop e faixa no mobile. */
+.registration-direct .choice-card{display:grid;grid-template-columns:minmax(0,1fr) 170px;align-items:center}
+.registration-card-copy{display:flex;flex-direction:column;gap:24px;min-width:0}
+.registration-card-stickers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:center;justify-items:center;padding:8px}
+.registration-card-stickers img{width:100%;max-width:80px;height:auto;animation:stickerBob 6s ease-in-out infinite}
+.registration-card-stickers img:nth-child(2){animation-delay:-2s}
+.registration-card-stickers img:last-child{grid-column:1/-1;animation-delay:-4s}
+@media(max-width:600px){
+.registration-direct .choice-card{grid-template-columns:minmax(0,1fr)}
+.registration-card-stickers{grid-template-columns:repeat(3,minmax(0,1fr));width:100%;gap:18px}
+.registration-card-stickers img{max-width:64px}
+.registration-card-stickers img:last-child{grid-column:auto}
+}
+@media(prefers-reduced-motion:reduce){.registration-card-stickers img{animation:none}}
