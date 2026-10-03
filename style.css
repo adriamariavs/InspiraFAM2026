@@ -1982,3 +1982,7 @@ p,small,strong,label,h1,h2,h3{overflow-wrap:break-word}
 .registration-card-stickers img:last-child{grid-column:auto}
 }
 @media(prefers-reduced-motion:reduce){.registration-card-stickers img{animation:none}}
+
+/* 18. BOTÃO SYMPLA — mesmo estilo rosa da chamada inicial. */
+.registration-sympla-button{width:100%;margin-top:12px;background:var(--pink);color:#fff;line-height:1.5}
+.registration-direct .choice-card:hover{transform:none;box-shadow:none}
