@@ -107,3 +107,4 @@ $('[data-full-prev]')?.addEventListener('click',()=>displayAboutPhoto(aboutPhoto
 $('[data-full-next]')?.addEventListener('click',()=>displayAboutPhoto(aboutPhotoIndex+1));
 aboutLightbox?.addEventListener('click',e=>{if(e.target===aboutLightbox)aboutLightbox.close()});
 aboutLightbox?.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();displayAboutPhoto(aboutPhotoIndex+(e.key==='ArrowLeft'?-1:1))}});
+
