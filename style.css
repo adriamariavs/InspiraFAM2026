@@ -2108,3 +2108,80 @@ p,small,strong,label,h1,h2,h3{overflow-wrap:break-word}
 }
 @media(max-width:390px){.registration-hero{padding-left:18px;padding-right:18px}.registration-hero h1{font-size:clamp(2.75rem,11.5vw,3.5rem)}}
 @media(prefers-reduced-motion:reduce){.registration-hero-stickers img,.new-section-stickers img,.activity-sticker-rail img,.timeline-stickers img{animation:none!important}}
+
+
+/* ========================================================
+   REFINAMENTO FINAL — INSPIRA FAM
+   Menos espaços vazios; artistas no carrossel da antiga galeria;
+   stickers em composição orgânica, sem sobreposição de conteúdo.
+======================================================== */
+.page-home .manifesto,.page-home .impact,.page-home .experiences,
+.page-home .schedule,.page-home .gallery,.page-home .location,
+.page-home .social{padding-block:clamp(54px,6.5vw,88px)}
+.page-home .partners-section,.page-home .support-section{padding-block:clamp(54px,6.5vw,88px)}
+.page-home .manifesto{min-height:0}
+.page-home .social{min-height:0}
+.page-home .section-heading{margin-bottom:clamp(20px,3vw,34px)}
+.page-home .section-heading h2{margin-bottom:clamp(14px,2vw,24px)}
+.page-home .partners-section .section-heading,.page-home .support-section .section-heading{margin-bottom:clamp(20px,3vw,32px)}
+.page-home .gallery-toolbar{margin-top:12px}
+.page-home .gallery-track{padding-block:20px 25px}
+.page-home .gallery-note{margin-bottom:0}
+.page-home .experience-grid{margin-top:24px}
+.page-home .schedule-head{margin-bottom:20px}
+.page-home .support-feature{padding:clamp(24px,4vw,42px)}
+.page-home .artist-memory-card{min-height:clamp(330px,34vw,450px);flex-basis:clamp(235px,30vw,390px);justify-content:space-between;cursor:default}
+.page-home .artist-memory-card .artist-memory-art{width:100%;height:clamp(120px,15vw,190px);display:grid;place-items:center;margin:18px 0}
+.page-home .artist-memory-card .artist-memory-art img{width:clamp(75px,10vw,125px);height:auto;max-height:100%;object-fit:contain;margin:0;filter:drop-shadow(0 8px 10px #0002)}
+.page-home .artist-memory-card strong{font-size:clamp(1.6rem,3vw,2.6rem);overflow-wrap:anywhere}
+.page-home .artist-memory-card .memory-top,.page-home .artist-memory-card .memory-bottom{font-size:.7rem}
+/* Hero: adesivos espalhados em posições independentes, com animação leve */
+.registration-hero{grid-template-columns:minmax(0,1fr) minmax(210px,29%)}
+.registration-hero-stickers{display:block;position:relative;min-height:470px;width:100%;align-self:stretch}
+.registration-hero-stickers img{position:absolute!important;max-width:none;transform-origin:center;animation:inspiraStickerFloat 5s ease-in-out infinite alternate}
+.registration-hero-stickers img:nth-child(1){top:3%;left:8%;width:clamp(90px,10vw,160px);transform:rotate(-18deg);animation-delay:-1s}
+.registration-hero-stickers img:nth-child(2){top:37%;right:-2%;left:auto;width:clamp(85px,10vw,145px);transform:rotate(16deg);animation-delay:-3s}
+.registration-hero-stickers img:nth-child(3){bottom:0;top:auto;left:1%;width:clamp(85px,10vw,155px);transform:rotate(-12deg);animation-delay:-2s}
+@keyframes inspiraStickerFloat{0%{translate:0 0}100%{translate:7px -14px}}
+/* Pequenos adesivos decorativos nas seções novas: alinhamento irregular */
+.new-section-stickers,.timeline-stickers{min-height:90px;align-items:center;justify-content:flex-end;gap:clamp(28px,5vw,95px)}
+.new-section-stickers img:first-child,.timeline-stickers img:first-child{transform:translateY(-12px) rotate(-17deg);animation:inspiraStickerFloat 5s ease-in-out infinite alternate}
+.new-section-stickers img:nth-child(2),.timeline-stickers img:nth-child(2){transform:translateY(15px) rotate(16deg);animation:inspiraStickerFloat 6s ease-in-out infinite alternate-reverse}
+@media(max-width:760px){
+ .page-home .manifesto,.page-home .impact,.page-home .experiences,.page-home .schedule,.page-home .gallery,.page-home .location,.page-home .social,.page-home .partners-section,.page-home .support-section{padding:clamp(42px,10vw,64px) 20px}
+ .page-home .gallery-toolbar{gap:8px;align-items:center}
+ .page-home .gallery-toolbar p{font-size:.82rem;max-width:55%}
+ .page-home .artist-memory-card{flex-basis:min(79vw,330px);min-height:365px;padding:22px}
+ .page-home .artist-memory-card .artist-memory-art{height:150px}
+ .registration-hero{grid-template-columns:minmax(0,1fr);gap:10px}
+ .registration-hero-stickers{height:130px;min-height:130px;max-width:430px}
+ .registration-hero-stickers img:nth-child(1){top:0;left:2%;width:85px}
+ .registration-hero-stickers img:nth-child(2){top:10px;left:41%;right:auto;width:76px}
+ .registration-hero-stickers img:nth-child(3){top:28px;left:auto;right:2%;bottom:auto;width:80px}
+ .new-section-stickers,.timeline-stickers{min-height:64px;gap:28px}
+}
+@media(max-width:390px){
+ .registration-hero-stickers{height:105px;min-height:105px}
+ .registration-hero-stickers img:nth-child(1){width:65px}
+ .registration-hero-stickers img:nth-child(2){width:62px}
+ .registration-hero-stickers img:nth-child(3){width:65px}
+ .page-home .artist-memory-card{flex-basis:82vw}
+}
+@media(prefers-reduced-motion:reduce){.registration-hero-stickers img,.new-section-stickers img,.timeline-stickers img{animation:none!important}}
+
+/* FEIRINHA EXPERIENCE — ingresso público preservado */
+.feirinha-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(130px,32%);align-items:center;gap:clamp(14px,4vw,42px);background:linear-gradient(125deg,#390099,#9e0059);color:#fff;border-radius:clamp(22px,4vw,38px);padding:clamp(24px,5vw,60px);overflow:hidden;position:relative}
+.feirinha-panel h3{font-size:clamp(2rem,6vw,4.5rem);line-height:.95;letter-spacing:-.06em;margin:14px 0 20px}
+.feirinha-panel p{max-width:530px}.feirinha-panel .button{max-width:100%;text-align:center}
+.feirinha-public-badge{display:inline-flex;background:#ffbd00!important;color:#00101d!important;border-radius:99px;padding:9px 14px;font-size:.7rem;letter-spacing:.08em}
+.feirinha-panel-art{position:relative;min-height:220px}.feirinha-panel-art img{position:absolute;width:clamp(90px,15vw,190px);max-width:75%;filter:drop-shadow(0 12px 15px #0002)}
+.feirinha-panel-art img:first-child{top:0;right:4%;transform:rotate(16deg)}.feirinha-panel-art img:last-child{bottom:0;left:0;transform:rotate(-18deg)}
+@media(max-width:620px){.feirinha-panel{grid-template-columns:1fr}.feirinha-panel-art{min-height:90px;display:flex;justify-content:flex-end;gap:12px}.feirinha-panel-art img{position:static!important;width:70px;transform:rotate(-12deg)!important}.feirinha-panel-art img:last-child{transform:rotate(15deg)!important}}
+
+/* Logotipos oficiais: proporções preservadas e comportamento responsivo */
+.partner-logo-image{width:100%;height:clamp(125px,16vw,200px);border-radius:16px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#fff}
+.partner-logo-image.partner-logo-dark{background:#000}
+.partner-logo-image img{display:block;width:100%;height:100%;object-fit:contain}
+.support-logo-image{width:100%;max-width:540px;height:clamp(170px,27vw,280px);display:flex;align-items:center;justify-content:center;border-radius:20px;overflow:hidden;background:#000}
+.support-logo-image img{display:block;width:100%;height:100%;object-fit:contain}
+@media(max-width:600px){.partner-logo-image{height:150px}.support-logo-image{height:190px;max-width:100%}}

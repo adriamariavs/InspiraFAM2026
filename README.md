@@ -57,3 +57,26 @@ Os **oito cards** agora indicam exclusividade para alunos FAM. Quando o status d
 6. **Atenção:** o Google Apps Script pode bloquear `fetch` cross-origin devido a CORS/redirecionamentos. Teste no domínio publicado antes de anunciar o recurso. Se houver bloqueio, será necessário hospedar um endpoint compatível com CORS no mesmo domínio ou em um serviço backend próprio. Não desative a validação como solução.
 
 **Limitações de segurança:** a verificação confirma somente o controle de um endereço `@fam.edu.br`; não confirma matrícula ativa. O Sympla continua com um link público, que pode ser compartilhado ou acessado diretamente. Para bloquear efetivamente inscrições de não alunos, configure **restrição de acesso no Sympla**, convites individuais, validação de matrícula ou uma integração com autenticação institucional. A verificação via site é uma etapa adicional, não uma proteção absoluta. Também é aconselhável acrescentar limites de requisição por IP/CAPTCHA em uma infraestrutura backend própria antes de um lançamento com alto volume.
+
+
+## Ajustes de layout — revisão final
+- A galeria inferior de 2025 foi substituída por um carrossel de 13 artistas; o carrossel de fotos de 2025 na seção Sobre foi preservado.
+- A grade extensa de artistas foi removida. O carrossel usa os botões de navegação existentes e suporta toque/teclado.
+- Os cards exibem mascotes provisórios; substitua pelas fotos autorizadas dos artistas quando recebê-las.
+- Os espaços verticais da página inicial foram reduzidos em desktop e mobile.
+- Os stickers da página de inscrições agora ficam em posições assimétricas, sem encobrir conteúdo.
+- A pasta `ativos/` do site original continua necessária e não está incluída neste ZIP.
+
+
+## Feirinha Experience — inscrição pública (09 e 10/11)
+
+O link original do Sympla foi mantido em `inscricoes.html` para a **Feirinha Experience**:
+`https://www.sympla.com.br/evento/inspira-fam---experience/3603612`
+
+O botão da feirinha é público e **não exige** e-mail `@fam.edu.br` nem passa pela verificação por código. A validação institucional aplica-se apenas às palestras (11/11) e aos sete workshops (12/11).
+
+**Verificar no painel do Sympla** se o evento original efetivamente está configurado para ingressos válidos apenas nos dias 09 e 10; a data e o acesso do ingresso não podem ser restringidos apenas alterando o HTML. Também conferir as regras de entrada e a informação de gratuidade.
+
+
+## Logotipos de patrocinadores e apoiador
+Os quatro arquivos recebidos foram adicionados em `ativos/patrocinadores/` e inseridos em `index.html`. As imagens preservam suas proporções com `object-fit: contain`. Mantenha a pasta `ativos/patrocinadores/` ao publicar. As demais imagens originais do site continuam necessárias na pasta `ativos/brand/`.

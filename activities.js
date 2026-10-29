@@ -63,7 +63,7 @@ verifyForm?.addEventListener('submit',async e=>{
 verifyDialog?.querySelector('.verification-close')?.addEventListener('click',()=>verifyDialog.close());
 verifyDialog?.addEventListener('click',e=>{if(e.target===verifyDialog)verifyDialog.close()});
 verifyDialog?.addEventListener('close',()=>{const area=$('#verification-success');if(area){area.hidden=true;area.replaceChildren()}setVerificationStage('request')});
-const artists=['Adara Calil','Pedro Leonelli','Alexia','Dr Blue','Amanda Emidio','Diego','Miriã','Alice FAM','Gustavo Oliveira','Czarina Artesanatos','Ateliê da Grazy','Beatriz Ciufri','Eduarda Oliveira'];const grid=$('#artists-grid');if(grid)grid.innerHTML=artists.map(n=>`<article class="artist-card reveal visible"><div class="artist-art" aria-hidden="true">✦</div><h3>${esc(n)}</h3><span>ARTISTA PARTICIPANTE</span></article>`).join('');
+
 async function load(){if(!$('#workshop-grid'))return;const endpoint=window.INSPIRA_ACTIVITIES_ENDPOINT?.trim();try{const url=endpoint||'activities.json';const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);const raw=await response.json();const items=Array.isArray(raw)?raw:raw.atividades;if(!Array.isArray(items)||!items.length)throw Error('Dados vazios');render(items.filter(x=>x&&x.id&&x.tipo));const note=$('#activity-sync-note');if(note)note.textContent=endpoint?'Informações atualizadas pela organização.':'Informações provisórias. Inscrições serão liberadas em breve.';}catch(err){const note=$('#activity-sync-note');if(note)note.textContent='Não foi possível atualizar as atividades. Tente novamente em instantes.';console.warn('Falha ao carregar atividades:',err)}}
 load();if($('#workshop-grid'))setInterval(load,120000);
 })();
