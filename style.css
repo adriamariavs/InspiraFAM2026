@@ -2169,14 +2169,14 @@ p,small,strong,label,h1,h2,h3{overflow-wrap:break-word}
 }
 @media(prefers-reduced-motion:reduce){.registration-hero-stickers img,.new-section-stickers img,.timeline-stickers img{animation:none!important}}
 
-/* FEIRINHA EXPERIENCE — ingresso público preservado */
-.feirinha-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(130px,32%);align-items:center;gap:clamp(14px,4vw,42px);background:linear-gradient(125deg,#390099,#9e0059);color:#fff;border-radius:clamp(22px,4vw,38px);padding:clamp(24px,5vw,60px);overflow:hidden;position:relative}
-.feirinha-panel h3{font-size:clamp(2rem,6vw,4.5rem);line-height:.95;letter-spacing:-.06em;margin:14px 0 20px}
-.feirinha-panel p{max-width:530px}.feirinha-panel .button{max-width:100%;text-align:center}
-.feirinha-public-badge{display:inline-flex;background:#ffbd00!important;color:#00101d!important;border-radius:99px;padding:9px 14px;font-size:.7rem;letter-spacing:.08em}
-.feirinha-panel-art{position:relative;min-height:220px}.feirinha-panel-art img{position:absolute;width:clamp(90px,15vw,190px);max-width:75%;filter:drop-shadow(0 12px 15px #0002)}
-.feirinha-panel-art img:first-child{top:0;right:4%;transform:rotate(16deg)}.feirinha-panel-art img:last-child{bottom:0;left:0;transform:rotate(-18deg)}
-@media(max-width:620px){.feirinha-panel{grid-template-columns:1fr}.feirinha-panel-art{min-height:90px;display:flex;justify-content:flex-end;gap:12px}.feirinha-panel-art img{position:static!important;width:70px;transform:rotate(-12deg)!important}.feirinha-panel-art img:last-child{transform:rotate(15deg)!important}}
+/* vitrine EXPERIENCE — ingresso público preservado */
+.vitrine-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(130px,32%);align-items:center;gap:clamp(14px,4vw,42px);background:linear-gradient(125deg,#390099,#9e0059);color:#fff;border-radius:clamp(22px,4vw,38px);padding:clamp(24px,5vw,60px);overflow:hidden;position:relative}
+.vitrine-panel h3{font-size:clamp(2rem,6vw,4.5rem);line-height:.95;letter-spacing:-.06em;margin:14px 0 20px}
+.vitrine-panel p{max-width:530px}.vitrine-panel .button{max-width:100%;text-align:center}
+.vitrine-public-badge{display:inline-flex;background:#ffbd00!important;color:#00101d!important;border-radius:99px;padding:9px 14px;font-size:.7rem;letter-spacing:.08em}
+.vitrine-panel-art{position:relative;min-height:220px}.vitrine-panel-art img{position:absolute;width:clamp(90px,15vw,190px);max-width:75%;filter:drop-shadow(0 12px 15px #0002)}
+.vitrine-panel-art img:first-child{top:0;right:4%;transform:rotate(16deg)}.vitrine-panel-art img:last-child{bottom:0;left:0;transform:rotate(-18deg)}
+@media(max-width:620px){.vitrine-panel{grid-template-columns:1fr}.vitrine-panel-art{min-height:90px;display:flex;justify-content:flex-end;gap:12px}.vitrine-panel-art img{position:static!important;width:70px;transform:rotate(-12deg)!important}.vitrine-panel-art img:last-child{transform:rotate(15deg)!important}}
 
 /* Logotipos oficiais: proporções preservadas e comportamento responsivo */
 .partner-logo-image{width:100%;height:clamp(125px,16vw,200px);border-radius:16px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#fff}
@@ -2185,3 +2185,20 @@ p,small,strong,label,h1,h2,h3{overflow-wrap:break-word}
 .support-logo-image{width:100%;max-width:540px;height:clamp(170px,27vw,280px);display:flex;align-items:center;justify-content:center;border-radius:20px;overflow:hidden;background:#000}
 .support-logo-image img{display:block;width:100%;height:100%;object-fit:contain}
 @media(max-width:600px){.partner-logo-image{height:150px}.support-logo-image{height:190px;max-width:100%}}
+
+/* INGRESSOS SYMPLA — avisos e instruções individuais */
+.activity-ticket-notice{max-width:850px;margin:16px 0 24px;padding:17px 21px;border-radius:18px;background:rgba(57,0,153,.08);border:1px solid rgba(57,0,153,.2);color:var(--navy);line-height:1.6;font-size:.95rem}
+.activity-ticket-help{font-size:.9rem;line-height:1.55;margin:16px 0 0;color:inherit}
+.activity-ticket-help strong{font-weight:700}
+@media(max-width:600px){.activity-ticket-notice{font-size:.85rem;padding:15px}.activity-dialog .button{max-width:100%;text-align:center;white-space:normal}}
+
+/* Ajustes finais: 4 patrocinadores e fotos de artistas */
+@media(min-width:901px){.partner-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.partner-logo-image{padding:18px;box-sizing:border-box;min-height:160px}
+.partner-logo-image img{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center}
+.partner-logo-placeholder{background:rgba(255,255,255,.09);border:2px dashed rgba(255,255,255,.35);color:#fff;text-align:center}
+.partner-logo-placeholder .logo-fallback{font-size:.75rem;letter-spacing:.07em;line-height:1.5;max-width:180px}
+.page-home .artist-memory-card .artist-memory-art{overflow:hidden;border-radius:18px}
+.page-home .artist-memory-card .artist-memory-art img:not(.artist-photo-fallback){width:100%;height:100%;max-height:none;object-fit:cover;object-position:center;filter:none;border-radius:18px}
+@media(max-width:900px){.partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.partner-grid{grid-template-columns:1fr}}
